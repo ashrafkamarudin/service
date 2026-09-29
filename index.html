@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ashraf is a software engineer available for occasional Linux server troubleshooting and small development tasks.">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Ashraf — Software Engineer & Infrastructure Troubleshooting</title>
+  <!-- Tailwind CSS only; no JavaScript or build step. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <style>
+    :root { color-scheme: light; }
+    html { scroll-behavior: smooth; }
+    body { background:#f7f6f2; color:#252923; font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    .muted { color:#656b63; }
+    .forest { color:#285541; }
+    .line { border-color:#dddcd5; }
+    .paper { background:#fffefa; }
+    .tag { background:#e8ede5; color:#365744; }
+    .button { background:#285541; color:white; transition:background .15s ease; }
+    .button:hover { background:#193d2d; }
+    .link { text-decoration-color:#91ad9c; text-underline-offset:4px; }
+    .link:hover { color:#285541; }
+    .monogram { background:#e5eae2; color:#285541; }
+    a:focus-visible { outline:2px solid #285541; outline-offset:4px; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } .button { transition:none; } }
+  </style>
+</head>
+<body class="antialiased">
+  <div class="max-w-5xl mx-auto px-6 sm:px-10">
+    <header class="flex items-center justify-between py-7 sm:py-9 border-b line">
+      <a href="#" class="flex items-center gap-3" aria-label="Ashraf, back to top">
+        <span class="monogram rounded-full w-10 h-10 flex items-center justify-center font-bold tracking-tight">a.</span>
+        <span class="font-semibold tracking-tight text-lg">Ashraf<span class="forest">.</span></span>
+      </a>
+      <nav class="flex items-center gap-5 sm:gap-8 text-sm" aria-label="Main navigation">
+        <a href="#about" class="muted link hidden sm:inline">About</a>
+        <a href="#work" class="muted link">What I do</a>
+        <a href="#contact" class="font-semibold forest link">Get in touch ↗</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="pt-20 pb-20 sm:pt-28 sm:pb-28 border-b line">
+        <div class="max-w-3xl">
+          <p class="forest text-sm font-semibold tracking-widest uppercase mb-7">Hello, I'm Ashraf <span aria-hidden="true">✳</span></p>
+          <h1 class="font-bold tracking-tight leading-tight mb-8" style="font-size:clamp(2.75rem,7vw,5.3rem);letter-spacing:-.055em;">
+            I help people fix <span class="forest">stubborn server problems.</span>
+          </h1>
+          <p class="muted text-lg sm:text-xl leading-relaxed max-w-2xl mb-9">
+            I'm a software engineer who spends a lot of time figuring out why things break in production.
+            I also take on occasional troubleshooting jobs for developers and small teams.
+          </p>
+          <div class="flex flex-col sm:flex-row sm:items-center gap-5">
+            <a class="button inline-flex items-center justify-center rounded-lg px-6 py-4 font-semibold text-sm" href="mailto:ashrafkamarudin1995@gmail.com?subject=Infrastructure%20help">Tell me what you're working on ↗</a>
+            <a class="forest font-medium text-sm link self-start sm:self-auto" href="#work">See what I can help with ↓</a>
+          </div>
+          <p class="muted text-sm mt-6">Available for occasional freelance work · Remote</p>
+        </div>
+      </section>
+
+      <section id="about" class="grid md:grid-cols-5 gap-10 md:gap-16 py-20 sm:py-24 border-b line">
+        <div class="md:col-span-2">
+          <p class="forest text-xs font-bold tracking-widest uppercase mb-4">A little about me</p>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight leading-tight">Engineer first.<br>Freelancer sometimes.</h2>
+          <img src="ashraf-portrait.png" alt="Portrait of Ashraf against a soft green background" class="mt-9 rounded-2xl object-cover shadow-sm" style="width:260px;height:260px;object-position:center;" width="260" height="260" loading="lazy">
+        </div>
+        <div class="md:col-span-3 text-base sm:text-lg leading-relaxed space-y-5">
+          <p>My day job involves investigating production issues and working with Linux servers, web stacks, and the unexpected things that happen when software meets the real world.</p>
+          <p>I've also worked on software projects before, so I understand the developer's side of things. These days, I particularly enjoy investigating server issues, untangling configurations, and finding the cause of problems that are slowing people down.</p>
+          <p>I'm keeping this small on purpose. If your team is stuck on a server problem—or needs a hand with a small development task—I'd be happy to hear about it.</p>
+          <p class="text-sm muted">No big agency. No sales team. Just me.</p>
+          <div class="flex flex-wrap gap-5 text-sm font-semibold mt-6"><a class="forest link underline" href="https://github.com/ashrafkamarudin" target="_blank" rel="noopener noreferrer" aria-label="Ashraf on GitHub">GitHub ↗</a><a class="forest link underline" href="https://www.linkedin.com/in/ashraf-kamarudin/" target="_blank" rel="noopener noreferrer" aria-label="Ashraf on LinkedIn">LinkedIn ↗</a><a class="forest link underline break-all" href="mailto:ashrafkamarudin1995@gmail.com" aria-label="Email Ashraf">Email ↗</a></div>
+        </div>
+      </section>
+
+      <section id="work" class="py-20 sm:py-24 border-b line">
+        <div class="max-w-2xl mb-10">
+          <p class="forest text-xs font-bold tracking-widest uppercase mb-4">What I can help with</p>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-5">Mostly servers. Occasionally code.</h2>
+          <p class="muted text-lg leading-relaxed">I focus on one-off troubleshooting, especially when a server is behaving strangely and you need someone to investigate.</p>
+        </div>
+        <div class="space-y-4">
+          <article class="paper rounded-xl border line p-7 sm:p-9">
+            <span class="inline-block tag rounded-full px-3 py-1 text-xs font-semibold mb-5">My main focus</span>
+            <h3 class="text-2xl font-semibold mb-3">Server troubleshooting</h3>
+            <p class="muted leading-relaxed max-w-2xl mb-6">502s and 504s, websites that suddenly slow down, services that refuse to start, strange configuration issues, and those problems that seem simple until you look closer. I can help investigate what went wrong and work toward a fix.</p>
+            <div class="flex flex-wrap gap-2 text-sm">
+              <span class="tag rounded-full px-3 py-1">Linux</span>
+              <span class="tag rounded-full px-3 py-1">NGINX</span>
+              <span class="tag rounded-full px-3 py-1">PHP-FPM</span>
+              <span class="tag rounded-full px-3 py-1">Logs &amp; diagnostics</span>
+              <span class="tag rounded-full px-3 py-1">Performance issues</span>
+            </div>
+          </article>
+          <article class="paper rounded-xl border line p-7 sm:p-9">
+            <span class="inline-block text-xs font-semibold muted mb-5">When it makes sense</span>
+            <h3 class="text-2xl font-semibold mb-3">Small development tasks</h3>
+            <p class="muted leading-relaxed max-w-2xl">Need a small bug fixed, an existing feature adjusted, or a little bit of backend work? I may be able to help, depending on the scope. I'm not taking on full website builds or long-term development projects right now.</p>
+          </article>
+        </div>
+        <p class="muted text-sm mt-7">Occasional freelance work, agreed case by case. No ongoing maintenance contracts or emergency response promises.</p>
+      </section>
+
+      <section class="py-20 sm:py-24 border-b line">
+        <div class="max-w-2xl">
+          <p class="forest text-xs font-bold tracking-widest uppercase mb-4">Working together</p>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-8">Keep it simple.</h2>
+          <div class="space-y-8">
+            <div class="flex gap-5">
+              <span class="forest font-bold text-sm pt-1">01</span>
+              <div><h3 class="font-semibold text-lg mb-1">Tell me what's happening</h3><p class="muted leading-relaxed">A short description, the symptoms, and anything you've already tried are plenty to start with.</p></div>
+            </div>
+            <div class="flex gap-5">
+              <span class="forest font-bold text-sm pt-1">02</span>
+              <div><h3 class="font-semibold text-lg mb-1">We'll agree on the scope</h3><p class="muted leading-relaxed">I'll let you know if it's something I can take on, and we'll agree on the work before I start.</p></div>
+            </div>
+            <div class="flex gap-5">
+              <span class="forest font-bold text-sm pt-1">03</span>
+              <div><h3 class="font-semibold text-lg mb-1">I investigate and report back</h3><p class="muted leading-relaxed">You'll get a clear explanation of what I found, what I changed, and anything that needs follow-up.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-20 sm:py-28">
+        <div class="max-w-3xl">
+          <p class="forest text-xs font-bold tracking-widest uppercase mb-4">Get in touch</p>
+          <h2 class="font-bold tracking-tight leading-tight mb-6" style="font-size:clamp(2.3rem,6vw,4.2rem);letter-spacing:-.045em;">Got a server problem?<br><span class="forest">Let's have a look.</span></h2>
+          <p class="muted text-lg leading-relaxed mb-9">Whether it's a stubborn server error or a small coding task, send me a quick email. I'll let you know if I can help.</p>
+          <a class="button inline-flex items-center justify-center rounded-lg px-6 py-4 font-semibold" href="mailto:ashrafkamarudin1995@gmail.com?subject=Infrastructure%20help">Email me ↗</a>
+          <p class="muted text-sm mt-5">Or reach me directly at <a class="forest link underline break-all" href="mailto:ashrafkamarudin1995@gmail.com">ashrafkamarudin1995@gmail.com</a>.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-8 border-t line flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-sm muted">
+      <p>© 2026 Ashraf. Built simply, on purpose.</p>
+      <div class="flex flex-wrap gap-5"><a href="https://github.com/ashrafkamarudin" target="_blank" rel="noopener noreferrer" class="link">GitHub ↗</a><a href="https://www.linkedin.com/in/ashraf-kamarudin/" target="_blank" rel="noopener noreferrer" class="link">LinkedIn ↗</a><a href="mailto:ashrafkamarudin1995@gmail.com" class="link">Email ↗</a><a href="#" class="link">Back to top ↑</a></div>
+    </footer>
+  </div>
+</body>
+</html>
