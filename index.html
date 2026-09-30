@@ -12,17 +12,27 @@
     :root { color-scheme: light; }
     html { scroll-behavior: smooth; }
     body { background:#f7f6f2; color:#252923; font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-    .muted { color:#656b63; }
-    .forest { color:#285541; }
-    .line { border-color:#dddcd5; }
+    .muted { color:#6f6469; }
+    .forest { color:#c2185b; }
+    .line { border-color:#e5d9de; }
     .paper { background:#fffefa; }
-    .tag { background:#e8ede5; color:#365744; }
-    .button { background:#285541; color:white; transition:background .15s ease; }
-    .button:hover { background:#193d2d; }
-    .link { text-decoration-color:#91ad9c; text-underline-offset:4px; }
-    .link:hover { color:#285541; }
-    .monogram { background:#e5eae2; color:#285541; }
-    a:focus-visible { outline:2px solid #285541; outline-offset:4px; }
+    .tag { background:#f8e3eb; color:#8f1748; }
+    .button { background:#e91e63; color:white; transition:background .15s ease; }
+    .button:hover { background:#c2185b; }
+    .link { text-decoration-color:#e5a9bd; text-underline-offset:4px; }
+    .link:hover { color:#c2185b; }
+    .monogram { background:#fce4ec; color:#c2185b; }
+    a:focus-visible { outline:2px solid #e91e63; outline-offset:4px; }
+    .plum { color:#5b4b63; }
+    .plum-bg { background:#eee8f0; }
+    .shape-pink, .shape-plum { position:absolute; border-radius:9999px; pointer-events:none; }
+    .shape-pink { width:180px; height:180px; background:#fce4ec; opacity:.7; }
+    .shape-plum { width:130px; height:130px; background:#eee8f0; opacity:.85; }
+    @media (max-width: 640px) {
+      .shape-pink { width:110px; height:110px; }
+      .shape-plum { width:80px; height:80px; }
+    }
+
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } .button { transition:none; } }
   </style>
 </head>
@@ -42,7 +52,9 @@
     </header>
 
     <main>
-      <section class="pt-20 pb-20 sm:pt-28 sm:pb-28 border-b line">
+      <section class="relative pt-20 pb-20 sm:pt-28 sm:pb-28 border-b line">
+        <span class="shape-pink" style="right:-70px;top:55px;" aria-hidden="true"></span>
+        <span class="shape-plum" style="right:55px;top:145px;" aria-hidden="true"></span>
         <div class="max-w-3xl">
           <p class="forest text-sm font-semibold tracking-widest uppercase mb-7">Hello, I'm Ashraf <span aria-hidden="true">✳</span></p>
           <h1 class="font-bold tracking-tight leading-tight mb-8" style="font-size:clamp(2.75rem,7vw,5.3rem);letter-spacing:-.055em;">
@@ -64,7 +76,7 @@
         <div class="md:col-span-2">
           <p class="forest text-xs font-bold tracking-widest uppercase mb-4">A little about me</p>
           <h2 class="text-3xl sm:text-4xl font-bold tracking-tight leading-tight">Engineer first.<br>Freelancer sometimes.</h2>
-          <img src="ashraf-portrait.png" alt="Portrait of Ashraf against a soft green background" class="mt-9 rounded-2xl object-cover shadow-sm" style="width:260px;height:260px;object-position:center;" width="260" height="260" loading="lazy">
+          <img src="ashraf-portrait.png" alt="Portrait of Ashraf" class="mt-9 rounded-2xl object-cover shadow-sm" style="width:260px;height:260px;object-position:center;" width="260" height="260" loading="lazy">
         </div>
         <div class="md:col-span-3 text-base sm:text-lg leading-relaxed space-y-5">
           <p>My day job involves investigating production issues and working with Linux servers, web stacks, and the unexpected things that happen when software meets the real world.</p>
@@ -113,7 +125,7 @@
               <div><h3 class="font-semibold text-lg mb-1">Tell me what's happening</h3><p class="muted leading-relaxed">A short description, the symptoms, and anything you've already tried are plenty to start with.</p></div>
             </div>
             <div class="flex gap-5">
-              <span class="forest font-bold text-sm pt-1">02</span>
+              <span class="plum font-bold text-sm pt-1">02</span>
               <div><h3 class="font-semibold text-lg mb-1">We'll agree on the scope</h3><p class="muted leading-relaxed">I'll let you know if it's something I can take on, and we'll agree on the work before I start.</p></div>
             </div>
             <div class="flex gap-5">
@@ -127,15 +139,35 @@
       <section id="projects" class="py-20 sm:py-24 border-b line">
         <div class="max-w-2xl mb-10">
           <p class="forest text-xs font-bold tracking-widest uppercase mb-4">Pet projects</p>
-          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-5">Small tools I've built.</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-5">Small stuff I've built.</h2>
           <p class="muted text-lg leading-relaxed">A few practical experiments and calculators.</p>
         </div>
-        <article class="paper rounded-xl border line p-7 sm:p-9">
-          <span class="inline-block tag rounded-full px-3 py-1 text-xs font-semibold mb-5">Investment tool</span>
-          <h3 class="text-2xl font-semibold mb-3">ASB Financing Calculator</h3>
-          <p class="muted leading-relaxed max-w-2xl mb-6">Compare ASB financing with investing the same out-of-pocket payments into ordinary ASB. Explore projected wealth, costs, annualized returns, and a year-by-year breakdown.</p>
-          <a class="button inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold text-sm" href="https://asbf_calculator.ashrafkamarudin.com/">Open calculator ↗</a>
-        </article>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          <article class="paper rounded-xl border line p-7 sm:p-9 flex flex-col">
+            <span class="inline-block self-start tag rounded-full px-3 py-1 text-xs font-semibold mb-5">Investment tool</span>
+            <h3 class="text-2xl font-semibold mb-3">ASB Financing Calculator</h3>
+            <p class="muted leading-relaxed max-w-2xl mb-6 flex-grow">
+              Compare ASB financing with investing the same out-of-pocket payments into ordinary ASB.
+              Explore projected wealth, costs, annualized returns, and a year-by-year breakdown.
+            </p>
+            <a class="button inline-flex items-center justify-center self-start rounded-lg px-5 py-3 font-semibold text-sm mt-auto" href="https://asbf_calculator.ashrafkamarudin.com/">
+              Open calculator ↗
+            </a>
+          </article>
+
+          <article class="paper rounded-xl border line p-7 sm:p-9 flex flex-col">
+            <span class="inline-block self-start rounded-full px-3 py-1 text-xs font-semibold mb-5 plum-bg plum">Badminton simulator</span>
+            <h3 class="text-2xl font-semibold mb-3">Shuttle Tactics</h3>
+            <p class="muted leading-relaxed max-w-2xl mb-6 flex-grow">
+              A small positioning lab for exploring badminton tactics. Choose your shot,
+              recovery position and anticipation, then see how your decisions shape the rally.
+            </p>
+            <a class="button inline-flex items-center justify-center self-start rounded-lg px-5 py-3 font-semibold text-sm mt-auto" href="https://shuttletactics.ashrafkamarudin.com/">
+              Open Shuttle Tactics ↗
+            </a>
+          </article>
+        </div>
       </section>
 
       <section id="contact" class="py-20 sm:py-28">
