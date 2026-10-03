@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -463,6 +463,12 @@
                     I wanted to see market rotation over time without
                     constantly reconstructing the picture in my head.
                     So I built a little observatory.
+
+                    <br><br>
+
+                    It is an experiment in observing market-cap rotation across
+                    sectors, industries and companies, rather than a literal
+                    measure of money flowing between them.
                 </p>
 
                 <div class="mt-8 mono text-[10px] text-stone-400">
@@ -705,8 +711,7 @@
         </h2>
 
 
-        <div class="relative mt-16 min-h-[700px] overflow-hidden">
-
+        <div class="relative mt-16 min-h-[900px] overflow-hidden">
 
             <!-- CENTER -->
 
@@ -714,153 +719,145 @@
                         -translate-x-1/2 -translate-y-1/2
                         w-36 h-36 rounded-full bg-black text-white
                         flex items-center justify-center text-center
-                        mono text-xs z-10">
+                        mono text-xs z-10 rotate-[-2deg]">
                 ASHRAF<br>
                 /SYSTEMS/
             </div>
 
 
-            <!-- SERVERS -->
+            <!-- THE MAIN FOUR -->
 
-            <div class="absolute left-[2%] md:left-[8%] top-[5%] rotate-[-4deg]">
-
-                <div class="rough-small bg-white px-6 py-5">
-
-                    <div class="mono text-[10px] text-stone-400">
-                        WORK
-                    </div>
-
-                    <div class="mt-2 text-2xl font-semibold">
-                        SERVERS
-                    </div>
-
+            <div class="absolute left-[3%] md:left-[8%] top-[8%] rotate-[-5deg]">
+                <div class="rough-small bg-white px-7 py-6">
+                    <div class="mono text-[10px] text-stone-400">WORK</div>
+                    <div class="mt-2 text-3xl font-semibold">SERVERS</div>
                     <div class="mt-3 text-sm text-stone-500">
                         Linux<br>
                         NGINX<br>
                         networking<br>
                         debugging
                     </div>
-
                 </div>
-
             </div>
 
-
-            <!-- SOFTWARE -->
-
-            <div class="absolute right-[2%] md:right-[8%] top-[10%] rotate-[3deg]">
-
-                <div class="rough-small bg-[var(--pink)] px-6 py-5">
-
-                    <div class="mono text-[10px]">
-                        BUILD
-                    </div>
-
-                    <div class="mt-2 text-2xl font-semibold">
-                        SOFTWARE
-                    </div>
-
+            <div class="absolute right-[3%] md:right-[8%] top-[8%] rotate-[4deg]">
+                <div class="rough-small bg-[var(--pink)] px-7 py-6">
+                    <div class="mono text-[10px]">BUILD</div>
+                    <div class="mt-2 text-3xl font-semibold">SOFTWARE</div>
                     <div class="mt-3 text-sm">
                         ideas<br>
                         databases<br>
                         weird tools
                     </div>
-
                 </div>
-
             </div>
 
-
-            <!-- MONEY -->
-
-            <div class="absolute left-[5%] md:left-[12%] bottom-[12%] rotate-[2deg]">
-
-                <div class="rough-small bg-[var(--green)] px-6 py-5">
-
-                    <div class="mono text-[10px]">
-                        INTEREST
-                    </div>
-
-                    <div class="mt-2 text-2xl font-semibold">
-                        MONEY
-                    </div>
-
+            <div class="absolute left-[3%] md:left-[10%] bottom-[8%] rotate-[3deg]">
+                <div class="rough-small bg-[var(--green)] px-7 py-6">
+                    <div class="mono text-[10px]">INTEREST</div>
+                    <div class="mt-2 text-3xl font-semibold">MONEY</div>
                     <div class="mt-3 text-sm">
                         investing<br>
                         trading<br>
                         capital rotation
                     </div>
-
                 </div>
-
             </div>
 
-
-            <!-- BADMINTON -->
-
-            <div class="absolute right-[4%] md:right-[11%] bottom-[9%] rotate-[-3deg]">
-
-                <div class="rough-small bg-[var(--blue)] px-6 py-5">
-
-                    <div class="mono text-[10px]">
-                        HOBBY
-                    </div>
-
-                    <div class="mt-2 text-2xl font-semibold">
-                        BADMINTON
-                    </div>
-
+            <div class="absolute right-[3%] md:right-[9%] bottom-[8%] rotate-[-4deg]">
+                <div class="rough-small bg-[var(--blue)] px-7 py-6">
+                    <div class="mono text-[10px]">HOBBY</div>
+                    <div class="mt-2 text-3xl font-semibold">BADMINTON</div>
                     <div class="mt-3 text-sm">
                         footwork<br>
                         reaction<br>
                         "why did I miss that?"
                     </div>
-
                 </div>
-
             </div>
 
 
-            <!-- GARDEN -->
-
-            <div class="absolute left-1/2 top-[2%]
-                        -translate-x-1/2 rotate-[2deg]">
-
-                <div class="px-5 py-3 mono text-sm bg-[var(--yellow)] rough-small">
-                    🌱 garden
-                </div>
-
+            <!-- SMALLER THINGS -->
+            <!-- Kept in loose bands around the main four, rather than crossing them. -->
+            <div class="absolute left-[31%] top-[3%] rotate-[2deg]">
+                <div class="px-4 py-2 mono text-sm bg-[var(--yellow)] rough-small">🎮 games</div>
             </div>
 
+            <div class="absolute left-[47%] top-[3%] rotate-[-3deg]">
+                <div class="px-4 py-2 mono text-sm bg-[var(--green)] rough-small">🌱 gardening</div>
+            </div>
 
-            <!-- COFFEE -->
+            <div class="absolute right-[31%] top-[60%] rotate-[4deg]">
+                <div class="px-4 py-2 mono text-sm bg-white border border-stone-300">☕ bitter coffee</div>
+            </div>
 
-            <div class="absolute left-[43%] bottom-[2%] rotate-[-4deg]">
+            <div class="absolute left-[13%] top-[36%] rotate-[-4deg]">
+                <div class="px-4 py-2 mono text-sm bg-white border border-stone-300">🍵 matcha latte</div>
+            </div>
 
-                <div class="px-5 py-3 mono text-sm bg-white border border-stone-300">
-                    ☕ bitter coffee
-                </div>
+            <div class="absolute left-[34%] top-[36%] rotate-[5deg]">
+                <div class="px-4 py-2 mono text-sm bg-[var(--orange)] rough-small">🍳 cooking</div>
+            </div>
 
+            <div class="absolute right-[34%] top-[36%] rotate-[-3deg]">
+                <div class="px-4 py-2 mono text-sm bg-white border border-stone-300">🥩 good steaks</div>
+            </div>
+
+            <div class="absolute left-[24%] bottom-[28%] rotate-[4deg]">
+                <div class="px-4 py-2 mono text-sm bg-[var(--pink)] rough-small">🍜 ramen</div>
+            </div>
+
+            <div class="absolute right-[24%] bottom-[28%] rotate-[-4deg]">
+                <div class="px-4 py-2 mono text-sm bg-white border border-stone-300">🍕 pizza</div>
+            </div>
+
+            <div class="absolute left-[31%] top-[17%] rotate-[3deg]">
+                <div class="px-4 py-2 mono text-sm bg-[var(--yellow)] rough-small">📖 light novels</div>
+            </div>
+
+            <div class="absolute right-[31%] top-[17%] rotate-[-3deg]">
+                <div class="px-4 py-2 mono text-sm bg-[var(--blue)] rough-small">📚 manhwa</div>
+            </div>
+
+            <div class="absolute left-[25%] bottom-[16%] rotate-[-4deg]">
+                <div class="px-4 py-2 mono text-sm bg-white border border-stone-300">📺 anime</div>
+            </div>
+
+            <div class="absolute right-[30%] bottom-[16%] rotate-[5deg]">
+                <div class="px-4 py-2 mono text-sm bg-[var(--green)] rough-small">🎬 movies</div>
+            </div>
+
+            <div class="absolute left-[48%] top-[21%] rotate-[3deg]">
+                <div class="px-4 py-2 mono text-sm bg-white border border-stone-300">🐈 cats</div>
+            </div>
+
+            <div class="absolute left-[42%] bottom-[21%] rotate-[-3deg]">
+                <div class="px-4 py-2 mono text-sm bg-white border border-stone-300">🚶 slow life</div>
+            </div>
+
+            <div class="absolute left-[23%] top-[48%] rotate-[3deg]">
+                <div class="px-4 py-2 mono text-sm bg-[var(--pink)] rough-small">💻 tiny tools</div>
+            </div>
+
+            <div class="absolute right-[17%] top-[48%] rotate-[-4deg]">
+                <div class="px-4 py-2 mono text-sm bg-[var(--green)] rough-small">📊 markets</div>
+            </div>
+
+            <div class="absolute left-[31%] bottom-[5%] rotate-[4deg]">
+                <div class="px-4 py-2 mono text-sm bg-white border border-stone-300">🏸 badminton</div>
+            </div>
+
+            <div class="absolute right-[40%] bottom-[5%] rotate-[-5deg]">
+                <div class="px-4 py-2 mono text-sm bg-[var(--yellow)] rough-small">🎵 music</div>
             </div>
 
 
             <!-- ARROWS -->
 
-            <div class="absolute left-[30%] top-[31%] mono text-2xl text-stone-400 rotate-[20deg]">
-                ↘
-            </div>
-
-            <div class="absolute right-[30%] top-[32%] mono text-2xl text-stone-400 rotate-[-20deg]">
-                ↙
-            </div>
-
-            <div class="absolute left-[31%] bottom-[30%] mono text-2xl text-stone-400 rotate-[-20deg]">
-                ↗
-            </div>
-
-            <div class="absolute right-[30%] bottom-[29%] mono text-2xl text-stone-400 rotate-[20deg]">
-                ↖
-            </div>
+            <div class="absolute left-[29%] top-[31%] mono text-2xl text-stone-400 rotate-[27deg]">↘</div>
+            <div class="absolute right-[29%] top-[31%] mono text-2xl text-stone-400 rotate-[-24deg]">↙</div>
+            <div class="absolute left-[29%] bottom-[31%] mono text-2xl text-stone-400 rotate-[-26deg]">↗</div>
+            <div class="absolute right-[29%] bottom-[31%] mono text-2xl text-stone-400 rotate-[25deg]">↖</div>
 
         </div>
 
@@ -1294,6 +1291,262 @@
 
             </div>
 
+
+        </div>
+
+        <!-- CAREER HISTORY -->
+        <div class="mt-20 border-t border-stone-300 pt-10">
+
+            <div class="mono text-xs text-stone-500 mb-3">
+                CAREER-INDEX / 001
+            </div>
+
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <h3 class="text-4xl md:text-5xl font-semibold tracking-tight">
+                        How I got here.
+                    </h3>
+                    <p class="mt-3 text-stone-500 max-w-2xl">
+                        Mostly software, servers, production problems and a suspicious
+                        willingness to fix things that were not technically mine.
+                    </p>
+                </div>
+
+                <div class="mono text-[10px] text-stone-400">
+                    2019 → now
+                </div>
+            </div>
+
+            <div class="mt-10 space-y-6">
+
+                <!-- RUN CLOUD -->
+                <div class="paper rough-small p-6 rotate-a">
+                    <div class="flex flex-col md:flex-row gap-6">
+
+                        <div class="shrink-0 w-16 h-16 flex items-center justify-center">
+                            <svg viewBox="0 0 64 64" class="w-14 h-14" aria-label="RunCloud mark">
+                                <path d="M18 43h28c7 0 12-5 12-11s-5-11-11-11c-1-7-7-12-14-12-7 0-13 5-14 12C12 21 7 26 7 33s5 10 11 10Z"
+                                      fill="#1f2937"/>
+                                <path d="M21 35h22" stroke="#f2efe7" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M27 28h10" stroke="#f2efe7" stroke-width="4" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+
+                        <div class="flex-1">
+                            <div class="flex flex-col md:flex-row md:justify-between gap-2">
+                                <div>
+                                    <div class="mono text-[10px] text-stone-400">
+                                        WORK-001 / PRIMARY
+                                    </div>
+                                    <h4 class="mt-2 text-2xl font-semibold">
+                                        RunCloud
+                                    </h4>
+                                </div>
+                                <div class="mono text-[10px] text-stone-400">
+                                    JUL 2022 → PRESENT
+                                </div>
+                            </div>
+
+                            <p class="mt-4 text-sm text-stone-600 leading-relaxed">
+                                Software Engineer. Lead some development projects and
+                                work on product core improvements.
+                            </p>
+
+                            <div class="mt-5 flex flex-wrap gap-2">
+                                <span class="mono text-[10px] bg-[var(--yellow)] px-2 py-1">JIRA</span>
+                                <span class="mono text-[10px] bg-[var(--blue)] px-2 py-1">SERVERS</span>
+                                <span class="mono text-[10px] bg-[var(--green)] px-2 py-1">LINUX</span>
+                                <span class="mono text-[10px] bg-[var(--pink)] px-2 py-1">PRODUCTION</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-7 ml-0 md:ml-[88px] border-t border-stone-200 pt-5">
+                        <div class="mono text-[10px] text-stone-400 mb-3">
+                            PREVIOUS ROLE / JAN 2020 → JUL 2022
+                        </div>
+
+                        <h5 class="font-semibold">
+                            Junior Software Engineer
+                        </h5>
+
+                        <p class="mt-2 text-sm text-stone-600 leading-relaxed max-w-3xl">
+                            Researched and developed new features, improved existing
+                            features and maintained the RunCloud Server panel,
+                            mostly on the back-end side of RunCloud microservices,
+                            with some front-end work when needed.
+                        </p>
+
+                        <div class="mt-5 grid sm:grid-cols-2 md:grid-cols-3 gap-2 mono text-[10px] text-stone-500">
+                            <span>DNS Manager / Cloudflare</span>
+                            <span>NGINX config debugger</span>
+                            <span>VueJS File Manager</span>
+                            <span>CHOWN / web app owner tools</span>
+                            <span>Admin Dashboard improvements</span>
+                            <span>Backup V2 / Dashboard / Switcher</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-7 ml-0 md:ml-[88px] border-t border-stone-200 pt-5">
+                        <div class="mono text-[10px] text-stone-400 mb-3">
+                            FIRST ROLE / SEP 2019 → DEC 2019
+                        </div>
+
+                        <h5 class="font-semibold">
+                            Web Development Intern
+                        </h5>
+
+                        <p class="mt-2 text-sm text-stone-600 leading-relaxed max-w-3xl">
+                            Developed new features, improved existing features and
+                            maintained the RunCloud Server panel, mostly around the
+                            back-end side of RunCloud microservices.
+                        </p>
+
+                        <div class="mt-4 mono text-[10px] text-stone-500">
+                            RunCloud Education · Admin Panel Improvement
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PAHANGGO -->
+                <div class="paper rough-small p-6 rotate-b">
+                    <div class="flex flex-col md:flex-row gap-6">
+
+                        <div class="shrink-0 w-16 h-16 rounded-full flex items-center justify-center bg-[#16a34a] text-white">
+                            <svg viewBox="0 0 64 64" class="w-12 h-12" aria-label="PahangGo mark">
+                                <circle cx="32" cy="32" r="27" fill="#16a34a"/>
+                                <path d="M20 20h15c7 0 11 4 11 10s-4 10-11 10h-7v8h-8V20Zm8 6v8h6c3 0 5-1 5-4s-2-4-5-4h-6Z"
+                                      fill="white"/>
+                            </svg>
+                        </div>
+
+                        <div class="flex-1">
+                            <div class="flex flex-col md:flex-row md:justify-between gap-2">
+                                <div>
+                                    <div class="mono text-[10px] text-stone-400">
+                                        FREELANCE / IPAYMENT
+                                    </div>
+                                    <h4 class="mt-2 text-2xl font-semibold">
+                                        PahangGo Sdn Bhd
+                                    </h4>
+                                </div>
+                                <div class="mono text-[10px] text-stone-400">
+                                    2022 → 2024
+                                </div>
+                            </div>
+
+                            <div class="mt-5 space-y-5">
+                                <div>
+                                    <div class="flex flex-col md:flex-row md:justify-between gap-1">
+                                        <h5 class="font-semibold">Freelance Software Developer</h5>
+                                        <span class="mono text-[10px] text-stone-400">DEC 2023 → JAN 2024</span>
+                                    </div>
+                                    <p class="mt-2 text-sm text-stone-600">
+                                        Helped resolve various issues with the IPayment platform.
+                                    </p>
+                                </div>
+
+                                <div class="border-t border-stone-200 pt-5">
+                                    <div class="flex flex-col md:flex-row md:justify-between gap-1">
+                                        <h5 class="font-semibold">Freelance Software Developer</h5>
+                                        <span class="mono text-[10px] text-stone-400">SEP 2022 → MAR 2023</span>
+                                    </div>
+                                    <p class="mt-2 text-sm text-stone-600">
+                                        Worked with in-house developers and freelancers
+                                        developing the CLT module of the IPayment system.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="mt-5 flex flex-wrap gap-2">
+                                <span class="mono text-[10px] bg-[var(--green)] px-2 py-1">LARAVEL</span>
+                                <span class="mono text-[10px] bg-[var(--blue)] px-2 py-1">ANGULARJS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KIDDOCARE -->
+                <div class="paper rough-small p-6 rotate-c">
+                    <div class="flex flex-col md:flex-row gap-6">
+
+                        <div class="shrink-0 w-16 h-16 rounded-xl flex items-center justify-center bg-[#2563eb] text-white">
+                            <svg viewBox="0 0 64 64" class="w-12 h-12" aria-label="Kiddocare mark">
+                                <path d="M32 54S10 41 10 25c0-7 5-12 12-12 5 0 8 3 10 6 2-3 5-6 10-6 7 0 12 5 12 12 0 16-22 29-22 29Z"
+                                      fill="white"/>
+                                <circle cx="25" cy="28" r="2.5" fill="#2563eb"/>
+                                <circle cx="39" cy="28" r="2.5" fill="#2563eb"/>
+                            </svg>
+                        </div>
+
+                        <div class="flex-1">
+                            <div class="flex flex-col md:flex-row md:justify-between gap-2">
+                                <div>
+                                    <div class="mono text-[10px] text-stone-400">
+                                        FREELANCE / API
+                                    </div>
+                                    <h4 class="mt-2 text-2xl font-semibold">
+                                        Kiddocare
+                                    </h4>
+                                </div>
+                                <div class="mono text-[10px] text-stone-400">
+                                    OCT 2021 → JAN 2022
+                                </div>
+                            </div>
+
+                            <p class="mt-4 text-sm text-stone-600 leading-relaxed max-w-3xl">
+                                Worked on adding and improving new and existing API
+                                endpoints, alongside bug fixes.
+                            </p>
+
+                            <div class="mt-5 flex flex-wrap gap-2">
+                                <span class="mono text-[10px] bg-[var(--blue)] px-2 py-1">API</span>
+                                <span class="mono text-[10px] bg-[var(--yellow)] px-2 py-1">BUG FIXES</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ASIA DEBUT -->
+                <div class="paper rough-small p-6 rotate-d">
+                    <div class="flex flex-col md:flex-row gap-6">
+
+                        <div class="shrink-0 w-16 h-16 flex items-center justify-center bg-[#242424] text-white">
+                            <svg viewBox="0 0 64 64" class="w-12 h-12" aria-label="Asia Debut mark">
+                                <rect x="5" y="5" width="54" height="54" rx="3" fill="#242424"/>
+                                <path d="M15 43 27 19h7l15 25h-9l-3-6H24l-3 6h-6Zm12-12h7l-3.5-7L27 31Z" fill="#f2efe7"/>
+                            </svg>
+                        </div>
+
+                        <div class="flex-1">
+                            <div class="flex flex-col md:flex-row md:justify-between gap-2">
+                                <div>
+                                    <div class="mono text-[10px] text-stone-400">
+                                        FREELANCE / WEB
+                                    </div>
+                                    <h4 class="mt-2 text-2xl font-semibold">
+                                        Asia Debut Sdn Bhd
+                                    </h4>
+                                </div>
+                                <div class="mono text-[10px] text-stone-400">
+                                    AUG 2020 → OCT 2020
+                                </div>
+                            </div>
+
+                            <p class="mt-4 text-sm text-stone-600 leading-relaxed max-w-3xl">
+                                Developed two dashboards using Laravel:
+                                an admin dashboard for the PahangGo app and an event dashboard.
+                            </p>
+
+                            <div class="mt-5 flex flex-wrap gap-2">
+                                <span class="mono text-[10px] bg-[var(--pink)] px-2 py-1">LARAVEL</span>
+                                <span class="mono text-[10px] bg-[var(--yellow)] px-2 py-1">BOOTSTRAP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
     </section>
@@ -1443,62 +1696,154 @@
 
         <div class="mt-12 max-w-4xl mono text-xs">
 
-
             <div class="grid md:grid-cols-[110px_1fr] gap-5 py-5 border-b line">
-
-                <span class="text-stone-400">
-                    2026.10
-                </span>
-
+                <span class="text-stone-400">2026.10</span>
                 <div>
-                    + Capital Rotation Observatory<br>
+                    + Capital Rotation Observatory went live<br>
+                    + Shuttle Tactics escaped into the internet<br>
+                    + ASBF Calculator became an actual thing instead of another spreadsheet<br>
                     + three deployed side projects<br>
-                    + decided the portfolio should stop looking like a portfolio
+                    + started treating side projects as things worth finishing<br>
+                    + portfolio.exe abandoned conventional UI/UX<br>
+                    + apparently cannot leave a problem alone once it enters my head
                 </div>
-
             </div>
 
-
             <div class="grid md:grid-cols-[110px_1fr] gap-5 py-5 border-b line">
-
-                <span class="text-stone-400">
-                    2026
-                </span>
-
-                <div>
-                    + Shuttle Tactics<br>
-                    + ASBF Calculator<br>
-                    + increasingly interested in building things
-                </div>
-
-            </div>
-
-
-            <div class="grid md:grid-cols-[110px_1fr] gap-5 py-5 border-b line">
-
-                <span class="text-stone-400">
-                    2025
-                </span>
-
+                <span class="text-stone-400">2025</span>
                 <div>
                     + more badminton<br>
                     + more investing<br>
-                    + more things to debug
+                    + more things to debug<br>
+                    + started building more things outside work<br>
+                    + accumulated several ideas that probably should not have been allowed
                 </div>
-
             </div>
 
+            <div class="grid md:grid-cols-[110px_1fr] gap-5 py-5 border-b line">
+                <span class="text-stone-400">2022 → 2024</span>
+                <div>
+                    + joined the freelance ecosystem<br>
+                    + worked on various software projects outside RunCloud<br>
+                    + continued accumulating production experience<br>
+                    + increasingly became the person people call when something is broken
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-[110px_1fr] gap-5 py-5 border-b line">
+                <span class="text-stone-400">2020</span>
+                <div>
+                    + joined RunCloud as Junior Software Engineer<br>
+                    + first proper job as a software engineer<br>
+                    + started working on actual production systems<br>
+                    + DNS Manager / Cloudflare integration<br>
+                    + custom NGINX configuration<br>
+                    + File Manager and dashboard work<br>
+                    + Backup V2<br>
+                    + learned that production software is considerably less forgiving than university projects
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-[110px_1fr] gap-5 py-5 border-b line">
+                <span class="text-stone-400">2019</span>
+                <div>
+                    + internship at RunCloud<br>
+                    + first serious exposure to production software<br>
+                    + RunCloud Education<br>
+                    + Admin Panel improvements<br>
+                    + PHP<br>
+                    + JavaScript<br>
+                    + somehow this turned into a career
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-[110px_1fr] gap-5 py-5 border-b line">
+                <span class="text-stone-400">2015 → 2020</span>
+                <div>
+                    <span class="text-stone-400">DEGREE ERA</span><br>
+                    <span class="text-stone-400">UMP / UNIVERSITI MALAYSIA PAHANG</span><br><br>
+                    + discovered the gem: programming<br>
+                    + started building things purely because I wanted to know how they worked<br>
+                    + built my own MVC framework<br>
+                    + built my own ORM<br>
+                    + learned Laravel<br>
+                    + made various questionable side projects<br>
+                    + spent an unreasonable amount of time reinventing things<br>
+                    + programming stopped being just a subject<br>
+                    + it became the thing
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-[110px_1fr] gap-5 py-5 border-b line">
+                <span class="text-stone-400">2012 → 2016</span>
+                <div>
+                    <span class="text-stone-400">DIPLOMA ERA</span><br>
+                    <span class="text-stone-400">UMP / UNIVERSITI MALAYSIA PAHANG</span><br><br>
+                    + EAT<br>
+                    + SLEEP<br>
+                    + GAME<br>
+                    + repeat<br><br>
+                    + skipped a suspicious number of classes<br>
+                    + discovered DOTA2<br>
+                    + played DOTA2 like it was a full-time occupation<br>
+                    + games became significantly more important than academic performance<br>
+                    + failed some subjects<br>
+                    + learned that skipping class has consequences<br><br>
+                    + took exactly one class on making animations<br>
+                    + entered an animation-making competition anyway<br>
+                    + somehow made something good enough to get a genuinely good comment<br>
+                    + briefly discovered that maybe I could make things after all<br><br>
+                    + probably learned more about games than anything else<br>
+                    + somehow still made it through
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-[110px_1fr] gap-5 py-5 border-b line">
+                <span class="text-stone-400">2006 → 2012</span>
+                <div>
+                    <span class="text-stone-400">SCHOOL ERA</span><br>
+                    <span class="text-stone-400">SKSS 2 → SMKA SHEIKH ABDUL MALEK</span><br><br>
+                    + primary school at SKSS 2<br>
+                    + secondary school at SMKA Sheikh Abdul Malek<br>
+                    + discovered MMORPGs<br>
+                    + Ragnarok Online entered the system<br>
+                    + spent ridiculous amounts of time gaming<br>
+                    + skipped classes<br>
+                    + played futsal<br>
+                    + played games<br>
+                    + came home<br>
+                    + played more games<br>
+                    + repeated<br><br>
+                    + school happened somewhere in between
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-[110px_1fr] gap-5 py-5 border-b line">
+                <span class="text-stone-400">2000s</span>
+                <div>
+                    <span class="text-stone-400">EARLY BUILD</span><br><br>
+                    + computers<br>
+                    + games<br>
+                    + random curiosity<br>
+                    + things taken apart for no particularly good reason<br>
+                    + Ashraf.exe begins accumulating random knowledge
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-[110px_1fr] gap-5 py-5 border-b line">
+                <span class="text-stone-400">1995</span>
+                <div>
+                    + born<br>
+                    + system initialized
+                </div>
+            </div>
 
             <div class="grid md:grid-cols-[110px_1fr] gap-5 py-5">
-
-                <span class="text-stone-400">
-                    ...
-                </span>
-
+                <span class="text-stone-400">STATUS</span>
                 <div class="text-stone-500">
-                    probably more stuff happened here
+                    still running<br>
+                    probably should not be trusted with another side project
                 </div>
-
             </div>
 
         </div>
@@ -1596,7 +1941,7 @@
             <div class="flex gap-5 mono text-xs">
 
                 <a
-                    href="https://github.com/"
+                    href="https://github.com/ashrafkamarudin"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="hover:underline"
@@ -1605,7 +1950,7 @@
                 </a>
 
                 <a
-                    href="https://www.linkedin.com/"
+                    href="https://www.linkedin.com/in/ashrafkamarudin/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="hover:underline"
