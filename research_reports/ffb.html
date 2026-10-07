@@ -1,338 +1,1103 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Ashraf's Research Findings: Farm Fresh Berhad equity research report.">
-<title>Ashraf's Research Findings / Farm Fresh Berhad (FFB)</title>
-<style>
-:root{
-  --bg:#f5f7f4; --paper:#fbfcfa; --ink:#17201c; --muted:#69736e;
-  --navy:#142d3b; --green:#245b49; --line:#d8dfda; --soft:#e9efeb;
-  --red:#8b3d35; --amber:#84662d; --max:1180px; --gold:#c59b45; --hero:#102a36;
-}
-*{box-sizing:border-box} html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;line-height:1.65}
-a{color:inherit}.page{max-width:var(--max);margin:auto;padding:28px 24px 80px}
-.topline,.footerline{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding-bottom:12px;color:var(--muted);font-size:12px;letter-spacing:.06em}
-.kicker{margin-top:72px;color:var(--green);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
-h1{font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-size:clamp(44px,8vw,92px);line-height:.95;letter-spacing:-.065em;margin:12px 0 22px;color:var(--navy)}
-h2{font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-size:clamp(28px,4vw,48px);line-height:1.05;letter-spacing:-.04em;margin:0 0 22px;color:var(--navy)}
-h3{font-size:17px;color:var(--navy);margin:0 0 8px}p{max-width:850px}
-.hero-grid{display:grid;grid-template-columns:1.5fr .8fr;gap:48px;align-items:end;margin-bottom:48px}
-.stamp{border:1px solid var(--line);padding:20px;background:var(--paper);font-size:12px;box-shadow:0 12px 30px rgba(20,45,59,.06);position:relative}
-.stamp:before{content:"REPORT DATE";display:block;color:var(--gold);font-size:10px;letter-spacing:.16em;font-weight:700;margin-bottom:6px}
-.stamp .date{display:block;font-family:Inter,system-ui,sans-serif;font-size:25px;font-weight:800;color:var(--navy);margin-bottom:16px}
-.stamp strong{display:block;color:var(--green);font-size:24px;margin:3px 0 8px}
-.meta{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
-.tag{border:1px solid var(--line);padding:5px 9px;background:var(--paper);font-size:11px}
-.nav{position:sticky;top:0;z-index:5;background:rgba(245,247,244,.94);backdrop-filter:blur(8px);border-block:1px solid var(--line);margin-inline:-24px;padding:10px 24px;overflow:auto;white-space:nowrap}
-.nav a{text-decoration:none;color:var(--muted);font-size:11px;margin-right:20px}.nav a:hover{color:var(--green)}
-section{padding:70px 0;border-bottom:1px solid var(--line)}.section-label{font-size:11px;color:var(--green);letter-spacing:.12em;margin-bottom:10px}
-.summary{font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-size:21px;line-height:1.45;color:#29352f}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}.card{background:var(--paper);border:1px solid var(--line);padding:20px;border-radius:3px;box-shadow:0 4px 16px rgba(20,45,59,.035)}
-.card .label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.card .value{font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-size:32px;font-weight:700;color:var(--navy);margin:4px 0}
-.green{color:var(--green)!important}.red{color:var(--red)!important}.amber{color:var(--amber)!important}
-.hero-date{display:inline-flex;align-items:center;gap:10px;margin:4px 0 8px;padding:7px 11px;border:1px solid #b9c8c1;background:#eef4f0;color:var(--green);font-size:11px;font-weight:700;letter-spacing:.08em}
-.hero-date .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px #dbe9e1}
-.table-wrap{overflow-x:auto;border:1px solid var(--line);background:var(--paper);margin-top:24px}
-table{width:100%;border-collapse:collapse;min-width:720px}th,td{text-align:right;padding:11px 13px;border-bottom:1px solid var(--line);font-size:12px}
-th{color:var(--muted);font-weight:500;background:#f0f4f1}th:first-child,td:first-child{text-align:left}
-.callout{border-left:4px solid var(--green);padding:17px 20px;background:var(--soft);margin:24px 0;border-radius:0 4px 4px 0}
-.warn{border-left-color:var(--amber);background:#f4f0e6}.danger{border-left-color:var(--red);background:#f5ebe9}
-.score{display:grid;grid-template-columns:1fr 90px;gap:0;border-top:1px solid var(--line)}.score div{padding:9px 0;border-bottom:1px solid var(--line);font-size:12px}.score div:nth-child(2n){text-align:right;font-weight:700;color:var(--green)}
-ul{padding-left:20px}li{margin:6px 0}.two{display:grid;grid-template-columns:1fr 1fr;gap:34px}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.big-number{font-family:Inter,system-ui,sans-serif;font-size:54px;line-height:1;color:var(--navy);font-weight:750}.source{font-size:10px;color:var(--muted);margin-top:12px}
-.mono-box{background:var(--navy);color:#dce8e1;padding:22px;overflow:auto;font-size:12px;margin-top:24px}.mono-box .prompt{color:#86b59f}
-footer{padding-top:28px;color:var(--muted);font-size:11px}
-@media(max-width:800px){.page{padding:20px 16px 45px}.hero-grid,.two{grid-template-columns:1fr}.cards,.three{grid-template-columns:1fr 1fr}.nav{margin-inline:-16px;padding-inline:16px}section{padding:52px 0}}
-@media(max-width:520px){.cards,.three{grid-template-columns:1fr}h1{font-size:52px}}
-</style>
-</head>
-<body>
-<div class="page">
-<div class="topline"><span>ASHRAF / RESEARCH SYSTEM v1.0</span><span>MY · 07 OCT 2026</span></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Ashraf's Research Findings: Farm Fresh Berhad equity research report." />
+    <title>Ashraf's Research Findings / Farm Fresh Berhad (FFB)</title>
+    <style>
+      :root {
+        --bg: #f5f7f4;
+        --paper: #fbfcfa;
+        --ink: #17201c;
+        --muted: #69736e;
+        --navy: #142d3b;
+        --green: #245b49;
+        --line: #d8dfda;
+        --soft: #e9efeb;
+        --red: #8b3d35;
+        --amber: #84662d;
+        --max: 1180px;
+        --gold: #c59b45;
+        --hero: #102a36;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        line-height: 1.65;
+      }
+      a {
+        color: inherit;
+      }
+      .page {
+        max-width: var(--max);
+        margin: auto;
+        padding: 28px 24px 80px;
+      }
+      .topline,
+      .footerline {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 12px;
+        color: var(--muted);
+        font-size: 12px;
+        letter-spacing: 0.06em;
+      }
+      .kicker {
+        margin-top: 72px;
+        color: var(--green);
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      h1,
+      h2 {
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        color: var(--navy);
+        letter-spacing: -0.055em;
+      }
+      h1 {
+        font-size: clamp(44px, 8vw, 92px);
+        line-height: 0.95;
+        margin: 12px 0 22px;
+      }
+      h2 {
+        font-size: clamp(28px, 4vw, 48px);
+        line-height: 1.05;
+        margin: 0 0 22px;
+      }
+      h3 {
+        font-size: 17px;
+        color: var(--navy);
+        margin: 0 0 8px;
+      }
+      p {
+        max-width: 900px;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 0.8fr;
+        gap: 48px;
+        align-items: end;
+        margin-bottom: 48px;
+      }
+      .stamp {
+        border: 1px solid var(--line);
+        padding: 20px;
+        background: var(--paper);
+        font-size: 12px;
+        box-shadow: 0 12px 30px rgba(20, 45, 59, 0.06);
+      }
+      .stamp:before {
+        content: "REPORT DATE";
+        display: block;
+        color: var(--gold);
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+      .stamp .date {
+        display: block;
+        font-family: Inter, system-ui, sans-serif;
+        font-size: 25px;
+        font-weight: 800;
+        color: var(--navy);
+        margin-bottom: 16px;
+      }
+      .stamp strong {
+        display: block;
+        color: var(--green);
+        font-size: 24px;
+        margin: 3px 0 8px;
+      }
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 24px 0;
+      }
+      .tag {
+        border: 1px solid var(--line);
+        padding: 5px 9px;
+        background: var(--paper);
+        font-size: 11px;
+      }
+      .hero-date {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin: 4px 0 8px;
+        padding: 7px 11px;
+        border: 1px solid #b9c8c1;
+        background: #eef4f0;
+        color: var(--green);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+      .hero-date .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--green);
+        box-shadow: 0 0 0 4px #dbe9e1;
+      }
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        background: rgba(245, 247, 244, 0.94);
+        backdrop-filter: blur(8px);
+        border-block: 1px solid var(--line);
+        margin-inline: -24px;
+        padding: 10px 24px;
+        overflow: auto;
+        white-space: nowrap;
+      }
+      .nav a {
+        text-decoration: none;
+        color: var(--muted);
+        font-size: 11px;
+        margin-right: 20px;
+      }
+      .nav a:hover {
+        color: var(--green);
+      }
+      section {
+        padding: 70px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .section-label {
+        font-size: 11px;
+        color: var(--green);
+        letter-spacing: 0.12em;
+        margin-bottom: 10px;
+      }
+      .summary {
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        font-size: 21px;
+        line-height: 1.45;
+        color: #29352f;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-top: 26px;
+      }
+      .card {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        padding: 20px;
+        border-radius: 3px;
+        box-shadow: 0 4px 16px rgba(20, 45, 59, 0.035);
+      }
+      .card .label {
+        font-size: 10px;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .card .value {
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--navy);
+        margin: 4px 0;
+      }
+      .green {
+        color: var(--green) !important;
+      }
+      .red {
+        color: var(--red) !important;
+      }
+      .amber {
+        color: var(--amber) !important;
+      }
+      .table-wrap {
+        overflow-x: auto;
+        border: 1px solid var(--line);
+        background: var(--paper);
+        margin-top: 24px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 720px;
+      }
+      th,
+      td {
+        text-align: right;
+        padding: 11px 13px;
+        border-bottom: 1px solid var(--line);
+        font-size: 12px;
+      }
+      th {
+        color: var(--muted);
+        font-weight: 500;
+        background: #f0f4f1;
+      }
+      th:first-child,
+      td:first-child {
+        text-align: left;
+      }
+      .callout {
+        border-left: 4px solid var(--green);
+        padding: 17px 20px;
+        background: var(--soft);
+        margin: 24px 0;
+        border-radius: 0 4px 4px 0;
+      }
+      .warn {
+        border-left-color: var(--amber);
+        background: #f4f0e6;
+      }
+      .danger {
+        border-left-color: var(--red);
+        background: #f5ebe9;
+      }
+      .score {
+        display: grid;
+        grid-template-columns: 1fr 100px;
+        gap: 0;
+        border-top: 1px solid var(--line);
+      }
+      .score div {
+        padding: 9px 0;
+        border-bottom: 1px solid var(--line);
+        font-size: 12px;
+      }
+      .score div:nth-child(2n) {
+        text-align: right;
+        font-weight: 700;
+        color: var(--green);
+      }
+      ul {
+        padding-left: 20px;
+      }
+      li {
+        margin: 6px 0;
+      }
+      .two {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 34px;
+      }
+      .three {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+      .big-number {
+        font-family: Inter, system-ui, sans-serif;
+        font-size: 54px;
+        line-height: 1;
+        color: var(--navy);
+        font-weight: 750;
+      }
+      .source {
+        font-size: 10px;
+        color: var(--muted);
+        margin-top: 12px;
+      }
+      .disclaimer {
+        border: 1px solid var(--amber);
+        background: #f7f2e8;
+        color: #51472f;
+        padding: 14px 18px;
+        margin: 18px 0 0;
+        font-size: 11px;
+        line-height: 1.6;
+      }
+      .disclaimer strong {
+        color: var(--amber);
+        letter-spacing: 0.05em;
+      }
+      .mono-box {
+        background: var(--navy);
+        color: #dce8e1;
+        padding: 22px;
+        overflow: auto;
+        font-size: 12px;
+        margin-top: 24px;
+      }
+      .mono-box .prompt {
+        color: #86b59f;
+      }
+      .pill {
+        display: inline-block;
+        padding: 4px 8px;
+        border: 1px solid var(--line);
+        font-size: 10px;
+        color: var(--muted);
+        margin: 3px 4px 3px 0;
+      }
+      .rating {
+        font-family: Inter, system-ui, sans-serif;
+        font-size: 42px;
+        color: var(--green);
+        font-weight: 800;
+      }
+      .small {
+        font-size: 11px;
+        color: var(--muted);
+      }
+      footer {
+        padding-top: 28px;
+        color: var(--muted);
+        font-size: 11px;
+      }
+      @media (max-width: 800px) {
+        .page {
+          padding: 20px 16px 45px;
+        }
+        .hero-grid,
+        .two {
+          grid-template-columns: 1fr;
+        }
+        .cards,
+        .three {
+          grid-template-columns: 1fr 1fr;
+        }
+        .nav {
+          margin-inline: -16px;
+          padding-inline: 16px;
+        }
+        section {
+          padding: 52px 0;
+        }
+      }
+      @media (max-width: 520px) {
+        .cards,
+        .three {
+          grid-template-columns: 1fr;
+        }
+        h1 {
+          font-size: 52px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="topline">
+        <span>ASHRAF / RESEARCH SYSTEM v1.0</span>
+        <span>MY · 07 OCT 2026</span>
+      </div>
 
-<header class="hero-grid">
-<div>
-<div class="kicker">ASHRAF'S RESEARCH FINDINGS</div>
-<div class="hero-date"><span class="dot"></span> EQUITY RESEARCH · 12–18 MONTH OUTLOOK</div>
-<h1>Farm Fresh Berhad<br><span style="font-size:.55em;letter-spacing:-.04em;">(FFB)</span></h1>
-<p class="summary">Farm Fresh is increasingly a scaled consumer platform rather than merely a Malaysian dairy brand. The next leg of the thesis depends on converting manufacturing capacity, herd expansion, ice cream and regional operations into sustained earnings growth without sacrificing returns on capital.</p>
-<div class="meta">
-<span class="tag">FARM FRESH BERHAD</span>
-<span class="tag">KLSE: FFB · 5306</span>
-<span class="tag">BUY</span>
-<span class="tag">12–18M FV: RM2.75</span>
-</div>
-</div>
-<aside class="stamp">
-<span class="date">07 OCT 2026</span>
-RATING
-<strong>BUY</strong>
-Current price: RM1.80<br>
-12–18M Target / FV: RM2.75<br>
-Base upside: ~53%<br>
-Risk: Medium
-<br><br>
-<span class="green">THESIS: ALIVE</span>
-</aside>
-</header>
+      <header class="hero-grid">
+        <div>
+          <div class="kicker">ASHRAF'S RESEARCH FINDINGS</div>
+          <div class="hero-date">
+            <span class="dot"></span>
+            EQUITY RESEARCH · 12–18 MONTH OUTLOOK
+          </div>
+          <h1>
+            Farm Fresh Berhad
+            <br />
+            <span style="font-size: 0.55em; letter-spacing: -0.04em">(FFB)</span>
+          </h1>
+          <p class="summary">
+            Farm Fresh is increasingly a scaled consumer platform rather than merely a Malaysian dairy brand. The next
+            leg of the thesis depends on converting manufacturing capacity, herd expansion, ice cream and regional
+            operations into sustained earnings growth without sacrificing returns on capital.
+          </p>
+          <div class="meta">
+            <span class="tag">FARM FRESH BERHAD</span>
+            <span class="tag">KLSE: FFB · 5306</span>
+            <span class="tag">BUY</span>
+            <span class="tag">12–18M FV: RM2.75</span>
+          </div>
 
-<nav class="nav">
-<a href="#summary">01 SUMMARY</a><a href="#business">02 BUSINESS</a><a href="#growth">03 GROWTH</a><a href="#regional">04 REGIONAL</a><a href="#financials">05 FINANCIALS</a><a href="#model">06 MODEL</a><a href="#valuation">07 VALUATION</a><a href="#risks">08 RISKS</a><a href="#dashboard">09 DASHBOARD</a><a href="#verdict">10 VERDICT</a>
-</nav>
+          <div class="disclaimer">
+            <strong>PERSONAL / PRIVATE RESEARCH JOURNAL</strong>
+            <br />
+            This report is for personal research and record-keeping only. It is
+            <strong>
+              not investment advice, a recommendation, an offer or solicitation to buy or sell any security
+            </strong>
+            . Readers should conduct their own research and seek appropriately qualified professional advice before
+            making investment decisions.
+          </div>
+        </div>
+        <aside class="stamp">
+          <span class="date">07 OCT 2026</span>
+          RATING
+          <strong>BUY</strong>
+          Current price: RM1.80
+          <br />
+          12–18M Target / FV: RM2.75
+          <br />
+          Base upside: ~53%
+          <br />
+          Risk: Medium
+          <br />
+          <br />
+          <span class="green">THESIS: ALIVE</span>
+        </aside>
+      </header>
 
-<section id="summary">
-<div class="section-label">01 / INVESTMENT SUMMARY</div>
-<h2>The story is no longer<br>just about milk.</h2>
-<p>Farm Fresh has moved beyond the early-stage Malaysian dairy story. FY2026 revenue exceeded RM1.1bn and PATAMI reached about RM130m, while the group continues to expand its domestic manufacturing footprint, livestock base and regional operations.</p>
-<div class="cards">
-<div class="card"><div class="label">Current price</div><div class="value">RM1.80</div><div>07 Oct 2026 reference</div></div>
-<div class="card"><div class="label">12–18M FV</div><div class="value green">RM2.75</div><div>Base case</div></div>
-<div class="card"><div class="label">Upside</div><div class="value green">~53%</div><div>Before dividends / costs</div></div>
-</div>
-<div class="callout"><strong>Core view.</strong> We remain constructive because FFB combines a recognised consumer brand, vertical integration, manufacturing scale and several identifiable growth levers. The stock is no longer cheap on a simple historical multiple, so the next leg must be earned through visible earnings growth.</div>
-<div class="two">
-<div><h3>What we like</h3><ul>
-<li>Established Malaysian dairy brand with growing distribution.</li>
-<li>Vertical integration across farms, processing and branded products.</li>
-<li>Ice cream capacity provides a meaningful new category opportunity.</li>
-<li>Growing herd and domestic manufacturing capacity support volume expansion.</li>
-<li>Philippines and Cambodia provide longer-duration regional optionality.</li>
-</ul></div>
-<div><h3>What keeps us cautious</h3><ul>
-<li>Input-cost volatility can pressure gross margins.</li>
-<li>Large expansion projects create a cash-flow/capex mismatch before returns mature.</li>
-<li>Regional businesses are still less proven than the Malaysian core.</li>
-<li>Premium valuation leaves less room for execution mistakes.</li>
-<li>Growth must translate into ROIC and free cash flow, not just revenue.</li>
-</ul></div>
-</div>
-</section>
+      <nav class="nav">
+        <a href="#summary">01 SUMMARY</a>
+        <a href="#business">02 BUSINESS</a>
+        <a href="#growth">03 GROWTH</a>
+        <a href="#regional">04 REGIONAL</a>
+        <a href="#financials">05 FINANCIALS</a>
+        <a href="#model">06 MODEL</a>
+        <a href="#valuation">07 VALUATION</a>
+        <a href="#risks">08 RISKS</a>
+        <a href="#dashboard">09 DASHBOARD</a>
+        <a href="#verdict">10 VERDICT</a>
+      </nav>
 
-<section id="business">
-<div class="section-label">02 / BUSINESS & MOAT</div>
-<h2>A vertically integrated<br>dairy platform.</h2>
-<p>FFB's advantage is operational rather than an absolute moat. The company controls meaningful parts of the milk supply chain, combines farming with processing and has built a consumer brand and distribution network capable of carrying additional products.</p>
-<div class="three">
-<div class="card"><h3>Brand</h3><div class="big-number">8.5/10</div><p>Strong Malaysian consumer recognition and a differentiated local-dairy positioning.</p></div>
-<div class="card"><h3>Integration</h3><div class="big-number">9/10</div><p>Farm-to-processing integration provides supply visibility and supports product development.</p></div>
-<div class="card"><h3>Growth</h3><div class="big-number">9/10</div><p>Multiple growth vectors reduce reliance on one product category.</p></div>
-</div>
-<div class="callout"><strong>Important distinction.</strong> The moat is not simply “Farm Fresh milk.” It is the combination of herd ownership, processing assets, distribution, brand awareness and the ability to launch new products through an existing platform.</div>
-</section>
+      <section>
+        <div class="section-label">01 / INVESTMENT SUMMARY</div>
+        <h2>
+          The story is no longer
+          <br />
+          just about milk.
+        </h2>
+        <p>
+          Farm Fresh has moved beyond the early-stage Malaysian dairy story. FY2026 revenue exceeded RM1.1bn and PATAMI
+          reached about RM130m, while the group continues to expand its domestic manufacturing footprint, livestock base
+          and regional operations.
+        </p>
+        <div class="cards">
+          <div class="card">
+            <div class="label">Current price</div>
+            <div class="value">RM1.80</div>
+            <div>07 Oct 2026 reference</div>
+          </div>
+          <div class="card">
+            <div class="label">12–18M FV</div>
+            <div class="value green">RM2.75</div>
+            <div>Base case</div>
+          </div>
+          <div class="card">
+            <div class="label">Upside</div>
+            <div class="value green">~53%</div>
+            <div>Before dividends / costs</div>
+          </div>
+        </div>
+        <div class="callout">
+          <strong>Core view.</strong>
+          We remain constructive because FFB combines a recognised consumer brand, vertical integration, manufacturing
+          scale and several identifiable growth levers. The stock is no longer cheap on a simple historical multiple, so
+          the next leg must be earned through visible earnings growth.
+        </div>
+        <div class="two">
+          <div>
+            <h3>What we like</h3>
+            <ul>
+              <li>Established Malaysian dairy brand with growing distribution.</li>
+              <li>Vertical integration across farms, processing and branded products.</li>
+              <li>Ice cream capacity provides a meaningful new category opportunity.</li>
+              <li>Growing herd and domestic manufacturing capacity support volume expansion.</li>
+              <li>Philippines and Cambodia provide longer-duration regional optionality.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>What keeps us cautious</h3>
+            <ul>
+              <li>Input-cost volatility can pressure gross margins.</li>
+              <li>Large expansion projects create a cash-flow/capex mismatch before returns mature.</li>
+              <li>Regional businesses are still less proven than the Malaysian core.</li>
+              <li>Premium valuation leaves less room for execution mistakes.</li>
+              <li>Growth must translate into ROIC and free cash flow, not just revenue.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-<section id="growth">
-<div class="section-label">03 / GROWTH ENGINE</div>
-<h2>The next earnings leg<br>has several pieces.</h2>
-<div class="cards">
-<div class="card"><div class="label">Dairy herd</div><div class="value green">+3,000</div><div>Additional cows targeted at Muadzam Shah</div></div>
-<div class="card"><div class="label">Ice cream</div><div class="value">EXPANDING</div><div>New capacity creates a larger category opportunity</div></div>
-<div class="card"><div class="label">New products</div><div class="value">MULTIPLE</div><div>Butter, powder products and other formats</div></div>
-</div>
-<div class="two">
-<div><h3>What should drive FY27–28</h3><ul>
-<li>Additional milk volume from the larger dairy herd.</li>
-<li>Better utilisation of manufacturing assets.</li>
-<li>Ice cream scale-up and broader distribution.</li>
-<li>New products improving revenue per distribution point.</li>
-<li>Regional manufacturing reducing cost-to-serve.</li>
-</ul></div>
-<div><h3>What would prove the thesis</h3><ul>
-<li>Revenue growth remains comfortably above nominal Malaysian GDP.</li>
-<li>Gross margin holds rather than being sacrificed for volume.</li>
-<li>New capacity produces incremental EBIT, not merely depreciation.</li>
-<li>Free cash flow improves as major projects mature.</li>
-<li>ROIC trends upward after the current investment cycle.</li>
-</ul></div>
-</div>
-</section>
+      <section>
+        <div class="section-label">02 / BUSINESS &amp; MOAT</div>
+        <h2>
+          A vertically integrated
+          <br />
+          dairy platform.
+        </h2>
+        <p>
+          FFB's advantage is operational rather than an absolute moat. The company controls meaningful parts of the milk
+          supply chain, combines farming with processing and has built a consumer brand and distribution network capable
+          of carrying additional products.
+        </p>
+        <div class="three">
+          <div class="card">
+            <h3>Brand</h3>
+            <div class="big-number">8.5/10</div>
+            <p>Strong Malaysian consumer recognition and a differentiated local-dairy positioning.</p>
+          </div>
+          <div class="card">
+            <h3>Integration</h3>
+            <div class="big-number">9/10</div>
+            <p>Farm-to-processing integration provides supply visibility and supports product development.</p>
+          </div>
+          <div class="card">
+            <h3>Growth</h3>
+            <div class="big-number">9/10</div>
+            <p>Multiple growth vectors reduce reliance on one product category.</p>
+          </div>
+        </div>
+        <div class="callout">
+          <strong>Important distinction.</strong>
+          The moat is not simply “Farm Fresh milk.” It is the combination of herd ownership, processing assets,
+          distribution, brand awareness and the ability to launch new products through an existing platform.
+        </div>
+      </section>
 
-<section id="regional">
-<div class="section-label">04 / REGIONAL OPTIONALITY</div>
-<h2>Cambodia and the Philippines<br>are options, not the base case.</h2>
-<p>We give meaningful strategic value to FFB's regional footprint, but deliberately avoid underwriting an aggressive regional contribution today. Local manufacturing and distribution density are the key tests.</p>
-<div class="three">
-<div class="card"><h3>Malaysia</h3><div class="big-number">CORE</div><p>The proven earnings engine. Most of the valuation should still be supported here.</p></div>
-<div class="card"><h3>Cambodia</h3><div class="big-number">OPTION</div><p>Local production can improve cost-to-serve and support Indochina expansion if utilisation scales.</p></div>
-<div class="card"><h3>Philippines</h3><div class="big-number">OPTION</div><p>Large addressable market, but execution and distribution density remain the main variables.</p></div>
-</div>
-<div class="callout warn"><strong>Valuation discipline.</strong> We do not assign a heroic terminal value to regional operations. They are upside to the core Malaysian earnings engine until local profitability becomes visible.</div>
-</section>
+      <section>
+        <div class="section-label">03 / GROWTH ENGINE</div>
+        <h2>
+          The next earnings leg
+          <br />
+          has several pieces.
+        </h2>
+        <div class="cards">
+          <div class="card">
+            <div class="label">Dairy herd</div>
+            <div class="value green">+3,000</div>
+            <div>Additional cows targeted at Muadzam Shah</div>
+          </div>
+          <div class="card">
+            <div class="label">Ice cream</div>
+            <div class="value">EXPANDING</div>
+            <div>New capacity creates a larger category opportunity</div>
+          </div>
+          <div class="card">
+            <div class="label">New products</div>
+            <div class="value">MULTIPLE</div>
+            <div>Butter, powder products and other formats</div>
+          </div>
+        </div>
+        <div class="two">
+          <div>
+            <h3>What should drive FY27–28</h3>
+            <ul>
+              <li>Additional milk volume from the larger dairy herd.</li>
+              <li>Better utilisation of manufacturing assets.</li>
+              <li>Ice cream scale-up and broader distribution.</li>
+              <li>New products improving revenue per distribution point.</li>
+              <li>Regional manufacturing reducing cost-to-serve.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>What would prove the thesis</h3>
+            <ul>
+              <li>Revenue growth remains comfortably above nominal Malaysian GDP.</li>
+              <li>Gross margin holds rather than being sacrificed for volume.</li>
+              <li>New capacity produces incremental EBIT, not merely depreciation.</li>
+              <li>Free cash flow improves as major projects mature.</li>
+              <li>ROIC trends upward after the current investment cycle.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-<section id="financials">
-<div class="section-label">05 / FINANCIALS</div>
-<h2>Growth has been real.<br>Now returns must catch up.</h2>
-<p>FFB has compounded revenue rapidly, but the investment cycle means headline revenue growth should not be confused with mature free-cash-flow economics. The quality of the next RM100m of revenue matters more than the first.</p>
-<div class="table-wrap">
-<table>
-<thead><tr><th>RM m</th><th>FY2022A</th><th>FY2023A</th><th>FY2024A</th><th>FY2025A</th><th>FY2026A</th></tr></thead>
-<tbody>
-<tr><td>Revenue</td><td>501.9</td><td>629.7</td><td>810.4</td><td>981.2</td><td>1,115.4</td></tr>
-<tr><td>PAT</td><td>78.6</td><td>49.9</td><td>63.3</td><td>107.3</td><td>130.4</td></tr>
-<tr><td>PATAMI</td><td>79.9</td><td>50.1</td><td>63.5</td><td>106.4</td><td>130.0</td></tr>
-<tr><td>Gross profit</td><td>136.3</td><td>149.7</td><td>216.0</td><td>315.2</td><td>366.7</td></tr>
-</tbody>
-</table>
-</div>
-<p class="source">Figures shown here are the figures used in the current FFB research framework. Forward estimates are Ashraf's assumptions, not company guidance.</p>
-<div class="callout"><strong>Key financial question.</strong> Can FFB continue growing revenue while keeping incremental margins healthy enough to offset depreciation, finance costs and expansion-related working capital?</div>
-</section>
+      <section>
+        <div class="section-label">04 / REGIONAL OPTIONALITY</div>
+        <h2>
+          Cambodia and the Philippines
+          <br />
+          are options, not the base case.
+        </h2>
+        <p>
+          We give meaningful strategic value to FFB's regional footprint, but deliberately avoid underwriting an
+          aggressive regional contribution today. Local manufacturing and distribution density are the key tests.
+        </p>
+        <div class="three">
+          <div class="card">
+            <h3>Malaysia</h3>
+            <div class="big-number">CORE</div>
+            <p>The proven earnings engine. Most of the valuation should still be supported here.</p>
+          </div>
+          <div class="card">
+            <h3>Cambodia</h3>
+            <div class="big-number">OPTION</div>
+            <p>Local production can improve cost-to-serve and support Indochina expansion if utilisation scales.</p>
+          </div>
+          <div class="card">
+            <h3>Philippines</h3>
+            <div class="big-number">OPTION</div>
+            <p>Large addressable market, but execution and distribution density remain the main variables.</p>
+          </div>
+        </div>
+        <div class="callout warn">
+          <strong>Valuation discipline.</strong>
+          We do not assign a heroic terminal value to regional operations. They are upside to the core Malaysian
+          earnings engine until local profitability becomes visible.
+        </div>
+      </section>
 
-<section id="model">
-<div class="section-label">06 / OUR OPERATING MODEL</div>
-<h2>FY2027–28 is where<br>the investment case gets tested.</h2>
-<div class="two">
-<div><h3>Base case · controlled growth</h3><div class="card">
-Revenue <strong>continued double-digit growth</strong><br>
-PATAMI <strong>continues compounding</strong><br>
-Gross margin <strong>broadly stable</strong><br>
-Malaysia <strong>remains the earnings anchor</strong><br>
-Regional <strong>gradual contribution</strong>
-</div><p>Our base case assumes the group continues to grow but does not require a dramatic margin expansion. The valuation is supported primarily by earnings growth and the quality of the platform.</p></div>
-<div><h3>Upside case · operating leverage</h3><div class="card">
-Revenue <strong>accelerates</strong><br>
-Ice cream <strong>scales faster</strong><br>
-Herd expansion <strong>adds milk volume</strong><br>
-Regional <strong>moves toward profitability</strong><br>
-FCF <strong>improves materially</strong>
-</div><p>The bull case requires the new assets to earn rather than simply exist. This is where multiple expansion becomes easier to justify.</p></div>
-</div>
-<div class="mono-box"><span class="prompt">ashraf@research:~$</span> ./check-thesis FFB
-<br><br>
-Revenue growth          &gt;10%      → HEALTHY
-<br>Gross margin            STABLE     → REQUIRED
-<br>Incremental EBIT        POSITIVE   → REQUIRED
-<br>Regional PAT            RAMPING    → UPSIDE
-<br>Free cash flow          IMPROVING  → REQUIRED
-<br>ROIC                    RISING     → REQUIRED
-<br><br><span class="prompt">status:</span> WATCH EARNINGS CONVERSION</div>
-</section>
+      <section>
+        <div class="section-label">05 / FINANCIALS</div>
+        <h2>
+          Growth has been real.
+          <br />
+          Now returns must catch up.
+        </h2>
+        <p>
+          FFB has compounded revenue rapidly, but the investment cycle means headline revenue growth should not be
+          confused with mature free-cash-flow economics. The quality of the next RM100m of revenue matters more than the
+          first.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>RM m</th>
+                <th>FY2022A</th>
+                <th>FY2023A</th>
+                <th>FY2024A</th>
+                <th>FY2025A</th>
+                <th>FY2026A</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Revenue</td>
+                <td>501.9</td>
+                <td>629.7</td>
+                <td>810.4</td>
+                <td>981.2</td>
+                <td>1,115.4</td>
+              </tr>
+              <tr>
+                <td>PAT</td>
+                <td>78.6</td>
+                <td>49.9</td>
+                <td>63.3</td>
+                <td>107.3</td>
+                <td>130.4</td>
+              </tr>
+              <tr>
+                <td>PATAMI</td>
+                <td>79.9</td>
+                <td>50.1</td>
+                <td>63.5</td>
+                <td>106.4</td>
+                <td>130.0</td>
+              </tr>
+              <tr>
+                <td>Gross profit</td>
+                <td>136.3</td>
+                <td>149.7</td>
+                <td>216.0</td>
+                <td>315.2</td>
+                <td>366.7</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="source">
+          Figures shown here are the figures used in the current FFB research framework. Forward estimates are Ashraf's
+          assumptions, not company guidance.
+        </p>
+        <div class="callout">
+          <strong>Key financial question.</strong>
+          Can FFB continue growing revenue while keeping incremental margins healthy enough to offset depreciation,
+          finance costs and expansion-related working capital?
+        </div>
+      </section>
 
-<section id="valuation">
-<div class="section-label">07 / VALUATION</div>
-<h2>RM2.75 is a growth target,<br>not a moonshot.</h2>
-<p>Our 12–18 month fair value of RM2.75 reflects the quality of the business and expected earnings growth while avoiding an extreme terminal multiple. We want the operating numbers to do most of the work.</p>
-<div class="three">
-<div class="card"><div class="label">Current price</div><div class="value">RM1.80</div><div>07 Oct 2026</div></div>
-<div class="card"><div class="label">Base FV</div><div class="value green">RM2.75</div><div>12–18 months</div></div>
-<div class="card"><div class="label">Upside</div><div class="value green">~53%</div><div>Before dividends / costs</div></div>
-</div>
-<div class="callout warn"><strong>Valuation discipline.</strong> The stock deserves a premium to mature dairy names because its growth runway is longer. It does not deserve an unlimited premium. If earnings growth falls materially below our base case, the fair value should be compressed rather than defended.</div>
-<div class="table-wrap">
-<table>
-<thead><tr><th>Scenario</th><th>Fair value</th><th>What must happen</th><th>Risk / reward</th></tr></thead>
-<tbody>
-<tr><td>Bear</td><td class="red">RM1.55–1.75</td><td>Growth slows, margins compress, regional expansion disappoints</td><td>Downside</td></tr>
-<tr><td>Base</td><td class="green">RM2.75</td><td>Domestic growth + capacity ramp + steady margins</td><td>Attractive</td></tr>
-<tr><td>Bull</td><td class="green">RM3.20–3.40</td><td>Strong product growth + regional scale + FCF improvement</td><td>High upside</td></tr>
-</tbody>
-</table>
-</div>
-</section>
+      <section>
+        <div class="section-label">06 / OUR OPERATING MODEL</div>
+        <h2>
+          FY2027–28 is where
+          <br />
+          the investment case gets tested.
+        </h2>
+        <div class="two">
+          <div>
+            <h3>Base case · controlled growth</h3>
+            <div class="card">
+              Revenue
+              <strong>continued double-digit growth</strong>
+              <br />
+              PATAMI
+              <strong>continues compounding</strong>
+              <br />
+              Gross margin
+              <strong>broadly stable</strong>
+              <br />
+              Malaysia
+              <strong>remains the earnings anchor</strong>
+              <br />
+              Regional
+              <strong>gradual contribution</strong>
+            </div>
+            <p>
+              Our base case assumes the group continues to grow but does not require a dramatic margin expansion. The
+              valuation is supported primarily by earnings growth and the quality of the platform.
+            </p>
+          </div>
+          <div>
+            <h3>Upside case · operating leverage</h3>
+            <div class="card">
+              Revenue
+              <strong>accelerates</strong>
+              <br />
+              Ice cream
+              <strong>scales faster</strong>
+              <br />
+              Herd expansion
+              <strong>adds milk volume</strong>
+              <br />
+              Regional
+              <strong>moves toward profitability</strong>
+              <br />
+              FCF
+              <strong>improves materially</strong>
+            </div>
+            <p>
+              The bull case requires the new assets to earn rather than simply exist. This is where multiple expansion
+              becomes easier to justify.
+            </p>
+          </div>
+        </div>
+        <div class="mono-box">
+          <span class="prompt">ashraf@research:~$</span>
+          ./check-thesis FFB
+          <br />
+          <br />
+          Revenue growth &gt;10% → HEALTHY
+          <br />
+          Gross margin STABLE → REQUIRED
+          <br />
+          Incremental EBIT POSITIVE → REQUIRED
+          <br />
+          Regional PAT RAMPING → UPSIDE
+          <br />
+          Free cash flow IMPROVING → REQUIRED
+          <br />
+          ROIC RISING → REQUIRED
+          <br />
+          <br />
+          <span class="prompt">status:</span>
+          WATCH EARNINGS CONVERSION
+        </div>
+      </section>
 
-<section id="risks">
-<div class="section-label">08 / RISKS & THESIS KILLERS</div>
-<h2>The biggest risk is not<br>lack of demand. It is poor capital returns.</h2>
-<div class="two">
-<div><h3>Primary risks</h3><ul>
-<li><strong>Input costs:</strong> milk powder, packaging, energy and agricultural costs can pressure margins.</li>
-<li><strong>Capex intensity:</strong> new factories, farms and equipment consume cash before earning mature returns.</li>
-<li><strong>Execution:</strong> regional expansion can destroy returns if utilisation remains low.</li>
-<li><strong>Competition:</strong> branded dairy and chilled categories remain competitive.</li>
-<li><strong>Valuation:</strong> premium stocks can derate quickly when growth expectations fall.</li>
-</ul></div>
-<div><h3>Hard thesis killers</h3>
-<div class="callout danger"><strong>1.</strong> Revenue growth continues but incremental margins deteriorate materially.</div>
-<div class="callout danger"><strong>2.</strong> New capacity fails to generate acceptable returns on invested capital.</div>
-<div class="callout danger"><strong>3.</strong> Regional expansion requires repeated capital injections without a credible path to profitability.</div>
-<div class="callout danger"><strong>4.</strong> Free cash flow remains structurally weak despite earnings growth.</div>
-</div>
-</div>
-</section>
+      <section>
+        <div class="section-label">07 / VALUATION</div>
+        <h2>
+          RM2.75 is a growth target,
+          <br />
+          not a moonshot.
+        </h2>
+        <p>
+          Our 12–18 month fair value of RM2.75 reflects the quality of the business and expected earnings growth while
+          avoiding an extreme terminal multiple. We want the operating numbers to do most of the work.
+        </p>
+        <div class="three">
+          <div class="card">
+            <div class="label">Current price</div>
+            <div class="value">RM1.80</div>
+            <div>07 Oct 2026</div>
+          </div>
+          <div class="card">
+            <div class="label">Base FV</div>
+            <div class="value green">RM2.75</div>
+            <div>12–18 months</div>
+          </div>
+          <div class="card">
+            <div class="label">Upside</div>
+            <div class="value green">~53%</div>
+            <div>Before dividends / costs</div>
+          </div>
+        </div>
+        <div class="callout warn">
+          <strong>Valuation discipline.</strong>
+          The stock deserves a premium to mature dairy names because its growth runway is longer. It does not deserve an
+          unlimited premium. If earnings growth falls materially below our base case, the fair value should be
+          compressed rather than defended.
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Scenario</th>
+                <th>Fair value</th>
+                <th>What must happen</th>
+                <th>Risk / reward</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bear</td>
+                <td class="red">RM1.55–1.75</td>
+                <td>Growth slows, margins compress, regional expansion disappoints</td>
+                <td>Downside</td>
+              </tr>
+              <tr>
+                <td>Base</td>
+                <td class="green">RM2.75</td>
+                <td>Domestic growth + capacity ramp + steady margins</td>
+                <td>Attractive</td>
+              </tr>
+              <tr>
+                <td>Bull</td>
+                <td class="green">RM3.20–3.40</td>
+                <td>Strong product growth + regional scale + FCF improvement</td>
+                <td>High upside</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-<section id="dashboard">
-<div class="section-label">09 / QUARTERLY DASHBOARD</div>
-<h2>What I would actually<br>check every quarter.</h2>
-<div class="score">
-<div><strong>Revenue growth</strong><br><span>Does the platform keep scaling?</span></div><div>&gt;10%</div>
-<div><strong>Gross margin</strong><br><span>Pricing versus input inflation</span></div><div>STABLE</div>
-<div><strong>Incremental EBIT</strong><br><span>Does new capacity earn?</span></div><div>POSITIVE</div>
-<div><strong>Ice cream</strong><br><span>Category scale and utilisation</span></div><div>RISING</div>
-<div><strong>Regional operations</strong><br><span>Cambodia / Philippines economics</span></div><div>RAMPING</div>
-<div><strong>Operating cash flow</strong><br><span>Earnings quality</span></div><div>IMPROVING</div>
-<div><strong>ROIC</strong><br><span>Return on the expansion cycle</span></div><div>RISING</div>
-</div>
-<div class="callout">The most important signal is <strong>earnings conversion</strong>. If revenue grows but cash flow, margins and ROIC do not follow, the growth narrative deserves a lower multiple.</div>
-</section>
+      <section>
+        <div class="section-label">08 / RISKS &amp; THESIS KILLERS</div>
+        <h2>
+          The biggest risk is not
+          <br />
+          lack of demand. It is poor capital returns.
+        </h2>
+        <div class="two">
+          <div>
+            <h3>Primary risks</h3>
+            <ul>
+              <li>
+                <strong>Input costs:</strong>
+                milk powder, packaging, energy and agricultural costs can pressure margins.
+              </li>
+              <li>
+                <strong>Capex intensity:</strong>
+                new factories, farms and equipment consume cash before earning mature returns.
+              </li>
+              <li>
+                <strong>Execution:</strong>
+                regional expansion can destroy returns if utilisation remains low.
+              </li>
+              <li>
+                <strong>Competition:</strong>
+                branded dairy and chilled categories remain competitive.
+              </li>
+              <li>
+                <strong>Valuation:</strong>
+                premium stocks can derate quickly when growth expectations fall.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Hard thesis killers</h3>
+            <div class="callout danger">
+              <strong>1.</strong>
+              Revenue growth continues but incremental margins deteriorate materially.
+            </div>
+            <div class="callout danger">
+              <strong>2.</strong>
+              New capacity fails to generate acceptable returns on invested capital.
+            </div>
+            <div class="callout danger">
+              <strong>3.</strong>
+              Regional expansion requires repeated capital injections without a credible path to profitability.
+            </div>
+            <div class="callout danger">
+              <strong>4.</strong>
+              Free cash flow remains structurally weak despite earnings growth.
+            </div>
+          </div>
+        </div>
+      </section>
 
-<section id="verdict">
-<div class="section-label">10 / FINAL VERDICT</div>
-<h2>FFB is a bet on<br>the next phase of scale.</h2>
-<p class="summary">At RM1.80, we think the risk/reward remains attractive for a medium-sized position. The company has already proven that it can build a meaningful dairy platform. The next question is whether that platform can compound earnings and cash flow as the investment cycle matures.</p>
-<div class="cards">
-<div class="card"><div class="label">Overall research score</div><div class="value green">8.5 / 10</div><div>High-quality growth platform, valuation still supportable</div></div>
-<div class="card"><div class="label">Base fair value</div><div class="value green">RM2.75</div><div>12–18 months</div></div>
-<div class="card"><div class="label">Bull-case value</div><div class="value">RM3.20–3.40</div><div>12–18M bull case</div></div>
-</div>
-<h3 style="margin-top:34px">Scorecard</h3>
-<div class="score">
-<div>Brand / consumer position</div><div>8.5/10</div>
-<div>Vertical integration</div><div>9.0/10</div>
-<div>Domestic growth</div><div>9.0/10</div>
-<div>Ice cream opportunity</div><div>8.5/10</div>
-<div>Regional optionality</div><div>8.0/10</div>
-<div>Management / execution</div><div>8.0/10</div>
-<div>Balance sheet</div><div>7.4/10</div>
-<div>Cash-flow quality</div><div>7.2/10</div>
-<div>Capital allocation</div><div>7.5/10</div>
-<div>Valuation</div><div>7.6/10</div>
-</div>
-<div class="callout"><strong>Bottom line:</strong> FFB deserves to be treated as a quality growth stock, but the quality premium must be earned every quarter. RM2.75 is achievable without assuming an extraordinary outcome. RM3.20+ requires stronger-than-base earnings conversion, better regional economics and evidence that the new capacity is generating attractive returns.</div>
-<div class="meta">
-<span class="tag">≤RM1.70 · STRONG BUY</span>
-<span class="tag">RM1.70–2.00 · BUY / ACCUMULATE</span>
-<span class="tag">RM2.00–2.50 · HOLD / WAIT FOR EARNINGS</span>
-<span class="tag">&gt;RM3.00 · NEED FASTER EARNINGS GROWTH</span>
-</div>
-</section>
+      <section>
+        <div class="section-label">09 / QUARTERLY DASHBOARD</div>
+        <h2>
+          What I would actually
+          <br />
+          check every quarter.
+        </h2>
+        <div class="score">
+          <div>
+            <strong>Revenue growth</strong>
+            <br />
+            <span>Does the platform keep scaling?</span>
+          </div>
+          <div>&gt;10%</div>
+          <div>
+            <strong>Gross margin</strong>
+            <br />
+            <span>Pricing versus input inflation</span>
+          </div>
+          <div>STABLE</div>
+          <div>
+            <strong>Incremental EBIT</strong>
+            <br />
+            <span>Does new capacity earn?</span>
+          </div>
+          <div>POSITIVE</div>
+          <div>
+            <strong>Ice cream</strong>
+            <br />
+            <span>Category scale and utilisation</span>
+          </div>
+          <div>RISING</div>
+          <div>
+            <strong>Regional operations</strong>
+            <br />
+            <span>Cambodia / Philippines economics</span>
+          </div>
+          <div>RAMPING</div>
+          <div>
+            <strong>Operating cash flow</strong>
+            <br />
+            <span>Earnings quality</span>
+          </div>
+          <div>IMPROVING</div>
+          <div>
+            <strong>ROIC</strong>
+            <br />
+            <span>Return on the expansion cycle</span>
+          </div>
+          <div>RISING</div>
+        </div>
+        <div class="callout">
+          The most important signal is
+          <strong>earnings conversion</strong>
+          . If revenue grows but cash flow, margins and ROIC do not follow, the growth narrative deserves a lower
+          multiple.
+        </div>
+      </section>
 
-<section>
-<div class="section-label">APPENDIX / RESEARCH NOTES</div>
-<h2>Facts, estimates, and the line between them.</h2>
-<div class="two">
-<div><h3>Reported / research basis</h3><ul>
-<li>FY2026 revenue of approximately RM1.115bn.</li>
-<li>FY2026 PATAMI of approximately RM130m.</li>
-<li>Gross profit of approximately RM366.7m in FY2026.</li>
-<li>Established domestic dairy manufacturing and farming platform.</li>
-<li>Expansion across ice cream and other dairy product categories.</li>
-<li>Regional operations in markets including Cambodia and the Philippines.</li>
-</ul></div>
-<div><h3>Our assumptions</h3><ul>
-<li>Continued double-digit medium-term revenue growth.</li>
-<li>Stable-to-improving gross margins as scale builds.</li>
-<li>Incremental capacity generating positive returns.</li>
-<li>Regional businesses gradually moving toward profitability.</li>
-<li>RM2.75 12–18 month fair value.</li>
-<li>Scenario probabilities and forward earnings assumptions.</li>
-</ul></div>
-</div>
-<div class="mono-box"><span class="prompt">research note:</span>
-<br><br>
-This is an independent research framework, not investment advice.
-<br>Forecasts can be wrong. The dashboard exists to make that visible.
-<br>The thesis should be updated when the numbers change, not defended because
-<br>the story is attractive.
-<br><br><span class="prompt">status:</span> alive · re-evaluate when the numbers change</div>
-</section>
+      <section>
+        <div class="section-label">10 / FINAL VERDICT</div>
+        <h2>
+          FFB is a bet on
+          <br />
+          the next phase of scale.
+        </h2>
+        <p class="summary">
+          At RM1.80, we think the risk/reward remains attractive for a medium-sized position. The company has already
+          proven that it can build a meaningful dairy platform. The next question is whether that platform can compound
+          earnings and cash flow as the investment cycle matures.
+        </p>
+        <div class="cards">
+          <div class="card">
+            <div class="label">Overall research score</div>
+            <div class="value green">8.5 / 10</div>
+            <div>High-quality growth platform, valuation still supportable</div>
+          </div>
+          <div class="card">
+            <div class="label">Base fair value</div>
+            <div class="value green">RM2.75</div>
+            <div>12–18 months</div>
+          </div>
+          <div class="card">
+            <div class="label">Bull-case value</div>
+            <div class="value">RM3.20–3.40</div>
+            <div>12–18M bull case</div>
+          </div>
+        </div>
+        <h3 style="margin-top: 34px">Scorecard</h3>
+        <div class="score">
+          <div>Brand / consumer position</div>
+          <div>8.5/10</div>
+          <div>Vertical integration</div>
+          <div>9.0/10</div>
+          <div>Domestic growth</div>
+          <div>9.0/10</div>
+          <div>Ice cream opportunity</div>
+          <div>8.5/10</div>
+          <div>Regional optionality</div>
+          <div>8.0/10</div>
+          <div>Management / execution</div>
+          <div>8.0/10</div>
+          <div>Balance sheet</div>
+          <div>7.4/10</div>
+          <div>Cash-flow quality</div>
+          <div>7.2/10</div>
+          <div>Capital allocation</div>
+          <div>7.5/10</div>
+          <div>Valuation</div>
+          <div>7.6/10</div>
+        </div>
+        <div class="callout">
+          <strong>Bottom line:</strong>
+          FFB deserves to be treated as a quality growth stock, but the quality premium must be earned every quarter.
+          RM2.75 is achievable without assuming an extraordinary outcome. RM3.20+ requires stronger-than-base earnings
+          conversion, better regional economics and evidence that the new capacity is generating attractive returns.
+        </div>
+        <div class="meta">
+          <span class="tag">≤RM1.70 · STRONG BUY</span>
+          <span class="tag">RM1.70–2.00 · BUY / ACCUMULATE</span>
+          <span class="tag">RM2.00–2.50 · HOLD / WAIT FOR EARNINGS</span>
+          <span class="tag">&gt;RM3.00 · NEED FASTER EARNINGS GROWTH</span>
+        </div>
+      </section>
 
-<footer>
-<div class="footerline"><span>ASHRAF / PERSONAL RESEARCH SYSTEM</span><span>FFB / 2026.10</span></div>
-<p>Sources used in the underlying research include Farm Fresh annual and quarterly reports, company disclosures and the research framework developed in this project. Market price reference: 07 Oct 2026. All forward estimates and fair-value assumptions are Ashraf's own research assumptions.</p>
-<p>status: <span class="green">alive</span> · last reviewed: 07 Oct 2026 · <span class="red">re-evaluate when the numbers change</span></p>
-</footer>
-</div>
-</body>
+      <section>
+        <div class="section-label">APPENDIX / RESEARCH NOTES</div>
+        <h2>Facts, estimates, and the line between them.</h2>
+        <div class="two">
+          <div>
+            <h3>Reported / research basis</h3>
+            <ul>
+              <li>FY2026 revenue of approximately RM1.115bn.</li>
+              <li>FY2026 PATAMI of approximately RM130m.</li>
+              <li>Gross profit of approximately RM366.7m in FY2026.</li>
+              <li>Established domestic dairy manufacturing and farming platform.</li>
+              <li>Expansion across ice cream and other dairy product categories.</li>
+              <li>Regional operations in markets including Cambodia and the Philippines.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Our assumptions</h3>
+            <ul>
+              <li>Continued double-digit medium-term revenue growth.</li>
+              <li>Stable-to-improving gross margins as scale builds.</li>
+              <li>Incremental capacity generating positive returns.</li>
+              <li>Regional businesses gradually moving toward profitability.</li>
+              <li>RM2.75 12–18 month fair value.</li>
+              <li>Scenario probabilities and forward earnings assumptions.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mono-box">
+          <span class="prompt">research note:</span>
+          <br />
+          <br />
+          This is an independent research framework, not investment advice.
+          <br />
+          Forecasts can be wrong. The dashboard exists to make that visible.
+          <br />
+          The thesis should be updated when the numbers change, not defended because
+          <br />
+          the story is attractive.
+          <br />
+          <br />
+          <span class="prompt">status:</span>
+          alive · re-evaluate when the numbers change
+        </div>
+      </section>
+
+      <footer>
+        <div class="footerline">
+          <span>ASHRAF / PERSONAL RESEARCH SYSTEM</span>
+          <span>FFB / 2026.10</span>
+        </div>
+        <p>
+          Sources used in the underlying research include Farm Fresh annual and quarterly reports, company disclosures
+          and the research framework developed in this project. Market price reference: 07 Oct 2026. All forward
+          estimates and fair-value assumptions are Ashraf's own research assumptions.
+        </p>
+        <p>
+          status:
+          <span class="green">alive</span>
+          · last reviewed: 07 Oct 2026 ·
+          <span class="red">re-evaluate when the numbers change</span>
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>
